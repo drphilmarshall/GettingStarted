@@ -1,15 +1,13 @@
 # GettingStarted with git and GitHub
 
-<p>
-  <ac:macro ac:name="toc"/>
-</p>
-<p>Please use the comments below to post requests for more FAQ!</p>
-<p>You can also ask for help at the DESC GitHub room on <a href="https://confluence.slac.stanford.edu/display/LSSTDESC/Getting+Started+using+HipChat">HipChat</a>, and the <a href="https://help.github.com/">GitHub help pages</a> are very good.</p>
-<p> </p>
+<Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
+
+The [GitHub help pages](https://help.github.com/) are also very good.
+
 <hr/>
 <h6>What is Git? And GitHub?</h6>
 <p>git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. </p>
-<p>GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep our repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.</p>
+<p>GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.</p>
 <p>You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.</p>
 <p>You will also need the unix command git to work on your local machine. </p>
 <hr/>
@@ -77,9 +75,7 @@
       </td>
       <td>
         <p>git remote add phil http://phil.com/paper.git</p>
-        <pre class="command-line">
-          <span style="font-size: 10.0pt;line-height: 13.0pt;white-space: pre-wrap;font-family: Arial , Helvetica , FreeSans , sans-serif;background-color: transparent;">git pull phil master</span>
-        </pre>
+        <p>git pull phil master</p>
       </td>
     </tr>
     <tr>
