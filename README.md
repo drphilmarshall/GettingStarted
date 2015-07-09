@@ -1,4 +1,4 @@
-# GettingStarted with git and GitHub
+# <a name="top"></a>Getting Started with git and GitHub
 
 Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
 
@@ -14,6 +14,7 @@ The [GitHub help pages](https://help.github.com/) are also very good.
 <p>GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.</p>
 <p>You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.</p>
 <p>You will also need the unix command git to work on your local machine. </p>
+[Back to top.](#top)
 <hr/>
 <h6>Slow down. What is a "versioning system"?</h6>
 <p>Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, ms.v1.tex, ms.v2.tex, ms.v3.tex, ms.final.tex, ms.final2.tex, ms.submitted.tex and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, ms.tex, while keeping track of all your old versions. It allows you to go back to them if you want. It also handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex, <em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.</p>
