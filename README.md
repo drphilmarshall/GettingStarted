@@ -18,9 +18,10 @@ The [GitHub help pages](https://help.github.com/) are also very good.
 * [How do I push and pull without having to type my password all the time?](#passwords)
 * [What is a GitHub "issue"?](#issuing)
 * [What is a "Pull Request"?](#pullrequests)
+* [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [Where can I find out more?](#more)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="whatisgit"></a>What is Git? And GitHub?
 
 git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
@@ -33,7 +34,7 @@ You will also need the unix command git to work on your local machine. 
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="versioning"></a>Slow down. What is a "versioning system"?
 
 Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, ms.v1.tex, ms.v2.tex, ms.v3.tex, ms.final.tex, ms.final2.tex, ms.submitted.tex and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, ms.tex, while keeping track of all your old versions. It allows you to go back to them if you want. It also handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex, <em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.
@@ -124,16 +125,33 @@ and so on. The magic command that saves you manually combining two files is "git
 
 With git (and other versioning systems), the act of archiving your old version is called "committing your changes." It's good to do this often, so that you have more options as to which version to go back to if you need to (because you don't have to worry about out of control file proliferation any more, right?). When you do a git commit you get to make a comment at the same time, to summarize in a few words what you did in this editing round. These comments are summarized for you when you do a "git log". The output of this command looks something like this:
 
-<pre>commit 95d6aad841215ce21472f68ef766ead9eabec1e7<br/>Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>Date: Thu Jul 2 09:24:28 2015 -0700</pre>
-<pre>   Merge branch 'master' of phil.com:paper</pre>
-<pre>commit 6c371b736abfb6fead8e15b378ead66675a313f0<br/>Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>Date: Thu Jul 2 10:45:05 2015 -0700</pre>
-<pre>   Added references</pre>
-<pre>commit 3c431b7236cdfb612ad8e15b378ead66675a32245<br/>Author: Phil &lt;phil@phil.com&gt;<br/>Date: Thu Jul 2 10:17:32 2015 -0700</pre>
-<pre>   Wrote method, results, discussion and conclusions</pre>
-<pre>commit 6f43fe926fbb23d5c7bfc94ed0f7204387aef918<br/>Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>Date: Thu Jul 2 10:00:05 2015 -0700</pre>
-<pre>   Finished introduction</pre>
-<pre>commit 3264125999c663ac696f7338fc1252be5551a018<br/>Merge: 06abaac 4853e0a<br/>Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>Date: Thu Jul 2 09:59:47 2015 -0700</pre>
-<pre>   Initial version</pre>
+<pre>
+commit 95d6aad841215ce21472f68ef766ead9eabec1e7<br/>
+Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>
+Date: Thu Jul 2 09:24:28 2015 -0700<br/>
+    Merge branch 'master' of phil.com:paper<br/>
+<br/>
+commit 6c371b736abfb6fead8e15b378ead66675a313f0<br/>
+Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>
+Date: Thu Jul 2 10:45:05 2015 -0700<br/>
+    Added references<br/>
+
+commit 3c431b7236cdfb612ad8e15b378ead66675a32245<br/>
+Author: Phil &lt;phil@phil.com&gt;<br/>
+Date: Thu Jul 2 10:17:32 2015 -0700<br/>
+    Wrote method, results, discussion and conclusions<br/>
+
+commit 6f43fe926fbb23d5c7bfc94ed0f7204387aef918<br/>
+Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>
+Date: Thu Jul 2 10:00:05 2015 -0700<br/>
+    Finished introduction<br/>
+<br/>
+commit 3264125999c663ac696f7338fc1252be5551a018<br/>
+Merge: 06abaac 4853e0a<br/>
+Author: Your Name &lt;your.name@emailprovider.com&gt;<br/>
+Date: Thu Jul 2 09:59:47 2015 -0700<br/>
+   Initial version<br/>
+</pre>
 
 Those horrendous hexadecimal strings are "commit IDs" - they are what you need to revert to an old version of your document. Actually, you don't need the whole string, just the first 7 characters. Suppose you want to go back and work on your old version (the one where you added the references but before you merged in the rubbish that Phil wrote). Here's what you would do:
 
@@ -243,7 +261,7 @@ As you might have guessed, git pull is actually a shortcut to two commands one a
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
 If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the project onto your local machine.
@@ -257,7 +275,7 @@ Now repeat the git clone command and you should see a local copy of the repo app
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="updating"></a>How do I get the latest version of the repository?
 
 This is typically in the master branch of the base (original) repository, so, after doing a "git status" to make sure you are in the right branch, do "git pull origin master".
@@ -267,7 +285,7 @@ If your local repo is a clone of a fork, you'll want to connect it to the base r
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="committing"></a>How do I commit my edits?
 
 Git has a commit command, just like svn: mostly you will use it as follows: git commit -am "comment"
@@ -283,7 +301,7 @@ To see all the remotes that you have access to, type 'git remote -v'.
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
 Fix it. The error message tells you which files contain the conflict. Open them in an editor and search for the string '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code between this string and the '======' mark is the remote version, while the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is your local version. Edit the file so it is correct. Then, to resolve the conflict in &lt;filename&gt;you 'git add &lt;filename&gt;'.
@@ -291,7 +309,7 @@ Fix it. The error message tells you which files contain the conflict. Open them 
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="deleting"></a>I want to delete a file. How do I do that?
 
 Just rm it as usual, and then do 'git status'. You'll see that git understands file deletion: when you commit all your changes, git will stop tracking that file. You'll still be able to access old versions of that file in the repository, though.
@@ -299,7 +317,7 @@ Just rm it as usual, and then do 'git status'. You'll see that git understands f
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="reverting"></a>I made some edits that I don't like and want to go back to the original file. What do I do?
 
 If you haven't committed your edits you can just git checkout – &lt;file&gt; and you will get back the original file. Be warned that your edits on this file will be lost (it will be overwritten)
@@ -307,7 +325,7 @@ If you haven't committed your edits you can just git checkout – &lt;file&gt; 
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="starting"></a>What's the best way to make a new repository?
 
 You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what an organization looks like.
@@ -322,7 +340,7 @@ In the repo's settings, at the bottom of the righthand sidebar, you can add coll
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="passwords"></a>How do I push and pull without having to type my password all the time?
 
 You can give GitHub your public SSH key instead. See the instructions [above](#contributing). 
@@ -330,7 +348,7 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
@@ -345,7 +363,7 @@ Private repos also have issue lists attached to them, but only the people in tha
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="pullrequests"></a>What is a "Pull Request"?
 
 Suppose you see something that needs fixing in a repo's code. Here's a good way to go about fixing it: 1) Make a branch to contain the fixed code, with something like "git checkout -b betterlayout" . 2) Edit the code and commit and push your changes, with "git push origin betterlayout". This makes a corresponding branch, also called "betterlayout" on the remote repo "origin". 3) Go to the repo's page on GitHub. It will probably prompt you to "submit a pull request" - if it doesn't, select the "betterlayout" branch from the "branch:" menu next to the repo name. 4) Click on the button to start a pull request. An issue-like form will appear, where you can edit the title of the pull request (eg "Better LaTeX Layout?") and provide some comment on what you have done and why. 5) Submit the pull request with the button at the bottom of the form. This will notify the repo's owner, and everyone else who is watching the repo, that you have made some changes and would like them to be merged into the code. The owner will then review your changes - notice how all the commits that have been made in the "betterlayout" branch are tracked automatically in the pull request thread.
@@ -354,8 +372,10 @@ As you can see, a pull request is a request for your changes to be pulled into a
 
 Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messages closely to see what is going on.
 
-<hr/>
-#### <a name="forks"></a> What's the difference between a "Fork" and a "Branch"?
+[Back to top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="forks"></a>What's the difference between a "Fork" and a "Branch"?
 
 A fork is a clone of the repository, in a different GitHub user's account. It comes with a master branch, and can have multiple additional branches just like any other repo. One key feature of a forked repo is you can push commits to it, even if you do not have push access to the base repo.  Another is that GitHub knows that the fork is connected to the base repo - and it makes it easy for you to submit a pull request from eg the master branch of the forked repo to the master branch of the base repo. 
 
@@ -364,7 +384,7 @@ As soon as you fork a repository, have in mind that it is continually diverging 
 
 [Back to top.](#top)
 
-<hr/>
+----------------------------------------------------------------------
 #### <a name="more"></a>Where can I find out more?
 
 <ul>
