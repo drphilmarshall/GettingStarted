@@ -7,8 +7,8 @@ For a video tutorial that should (hopefully) get you from git newbie to being ab
 ## FAQ
 
 * [What is Git? And GitHub?](#whatisgit)
-* [Who am I? And how did I get here?](#seriouslylost)
 * [Slow down. What is a "versioning system"?](#versioning)
+* [Who am I? And how did I get here?](#seriouslylost)
 * [How do I contribute to a project on GitHub?](#contributing)
 * [How do I get the latest version of the repository?](#updating)
 * [How do I commit my edits?](#committing)
@@ -259,6 +259,18 @@ Now, suppose you want to submit your version of the document to a journal. You t
 Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a git checkout can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The "git status" command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
 
 As you might have guessed, git pull is actually a shortcut to two commands one after the other: git fetch (to get any new commits from the remote repository) and git merge (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, It's actually quite hard to over-write files and lose work. Git will not let you pull in other peoples changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
+
+[Back to top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="seriouslylost"></a>Who am I? And how did I get here?
+
+Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
+page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
+good idea to enter your full name (and preferably some other public details about yourself) so that people can 
+find you and communicate with you on GitHub.
+
+You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
 
 [Back to top.](#top)
 
