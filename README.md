@@ -305,7 +305,13 @@ To see all the remotes that you have access to, type 'git remote -v'.
 ----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error message tells you which files contain the conflict. Open them in an editor and search for the string '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code between this string and the '======' mark is the remote version, while the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is your local version. Edit the file so it is correct. Then, to resolve the conflict in &lt;filename&gt;you 'git add &lt;filename&gt;'.
+Fix it. The error message tells you which files contain the conflict. 
+Open them in an editor and search for the string 
+'&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code 
+between this string and the '======' mark is the remote version, while 
+the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is 
+your local version. Edit the file so it is correct. Then, to resolve the 
+conflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
 
 
 [Back to top.](#top)
