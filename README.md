@@ -4,7 +4,7 @@ Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues)
 
 The [GitHub help pages](https://help.github.com/) are also very good.
 
-## FAQ
+## FAKKK
 
 * [What is Git? And GitHub?](#whatisgit)
 * [Slow down. What is a "versioning system"?](#versioning)
