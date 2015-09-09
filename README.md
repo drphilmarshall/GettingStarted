@@ -7,6 +7,7 @@ The [GitHub help pages](https://help.github.com/) are also very good.
 ## FAQ
 
 * [What is Git? And GitHub?](#whatisgit)
+* [Who am I? And how did I get here?](#seriouslylost)
 * [Slow down. What is a "versioning system"?](#versioning)
 * [How do I contribute to a project on GitHub?](#contributing)
 * [How do I get the latest version of the repository?](#updating)
