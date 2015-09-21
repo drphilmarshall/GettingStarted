@@ -324,6 +324,17 @@ between this string and the '======' mark is the remote version, while
 the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is 
 your local version. Edit the file so it is correct. Then, to resolve the 
 conflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
+You will also want to push your change to the remote branch / hosting services
+like GitHub.
+Use 
+```
+$ git rebase --continue
+```
+after you have fixed the conflicts.   
+If you find yourself fixing complicated conflicts often,
+you may want to learn how to use a `mergetool` to compare the differences. 
+A more involved tutorial can be found
+[here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
 
 
 [Back to top.](#top)
@@ -421,6 +432,14 @@ As soon as you fork a repository, have in mind that it is continually diverging 
   <li>
     <a href="https://confluence.lsstcorp.org/display/SIM/Git+and+STASH+for+Simulations">LSST Simulations Framework Guide</a>. For the more sophisticated command line users. Written by Mario Juric and Andrew Connolly.</li>
   <li>The branching nature of git can be tricky to visualize at first.  These <a href="http://onlywei.github.io/explain-git-with-d3/">visual git tutorials</a> are helpful to understand what the git commands are doing in the git commit tree.</li>
+  <li><a href="http://www.sbf5.com/~cduan/technical/git/git-1.shtml"> Best
+  explanation of the different terminology in Git.</a> If you find yourself
+  collaborating with others often via Git and GitHub, I highly recommend going
+  through these short tutorials.</li>
+  <li><a
+  href="http://www.git-tower.com/learn/git/ebook/command-line/basics/what-is-version-control#start">
+  Easy to read guide</a> on the concepts, best practices and commands for
+  common Git workflow for collaborations.</li> 
 </ul>
 
 [Back to top.](#top)
