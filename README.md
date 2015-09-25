@@ -267,7 +267,7 @@ As you might have guessed, git pull is actually a shortcut to two commands one a
 
 Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
-good idea to enter your full name (and preferably some other public details about yourself) so that people can 
+good idea to enter your full name (and preferably some other public details about yourself) so that people can
 find you and communicate with you on GitHub.
 
 You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
@@ -317,12 +317,12 @@ To see all the remotes that you have access to, type 'git remote -v'.
 ----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error message tells you which files contain the conflict. 
-Open them in an editor and search for the string 
-'&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code 
-between this string and the '======' mark is the remote version, while 
-the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is 
-your local version. Edit the file so it is correct. Then, to resolve the 
+Fix it. The error message tells you which files contain the conflict.
+Open them in an editor and search for the string
+'&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
+between this string and the '======' mark is the remote version, while
+the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is
+your local version. Edit the file so it is correct. Then, to resolve the
 conflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
 
 
@@ -369,6 +369,8 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 
 ----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
+
+To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
