@@ -370,7 +370,7 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 ----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
 
-To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs#)
+To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
