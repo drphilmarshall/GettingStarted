@@ -389,13 +389,15 @@ Private repos also have issue lists attached to them, but only the people in tha
 #### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
 Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well. 
-However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to watch repos effectively. First though, if you only want to receive notifications about issues that you are specifically mentioned in, click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers, and other serious stakeholders. "Unwatching" is often a good choice for developers.
+However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to follow repos effectively. 
 
-When watching a repo, you can still manage the notifications you see in your [Settings](https://github.com/settings/notifications). *Filtering* your email is also an effective strategy: you can label/redirect GitHub messages by sender or repo name, but also by whether you are "mentioned" (by your @username) in the message. 
+First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
 
-All of the above works best if your team uses the @mention feature well. A good rule of thumb is that @mentioning someone by username in an issue is like putting them in the "To:" field of an email, while anything else is like cc'ing them: you should only expect a reply if you @mention someone. With this in mind, you can filter GitHub's emails with less concern about missing something.
+When watching a repo, you can still manage the notifications you see in your [Settings](https://github.com/settings/notifications). *Filtering* your email is also an effective strategy: you can label/redirect GitHub messages by sender or repo name, but also by whether you are @mentioned (by your @username) in the message. 
 
-One last thing: because GitHub issues are usually well-separated by topic, you can very often skim and archive their notification emails very quickly. This can be very satisfying if you love rapidly clearing away emails so you don't have to look at them any more.
+All of the above works best if your team uses the @mention feature well. A good rule of thumb is that you should assume that only the people who are @mention-ed in an issue will get an email notification. Following this rule will enable everyone to filter GitHub's emails with less concern about missing something. Note that in an organization, you can @mention teams as well as people - and that the auto-complete is pretty intelligent (just start typing the team name after the '@' sign).
+
+One last thing: because GitHub issues are usually well-separated by topic, you can very often skim and archive their notification emails quickly. This can be very satisfying if you love rapidly clearing away emails so you don't have to look at them any more.
 
 [Back to top.](#top)
 
