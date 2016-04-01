@@ -18,7 +18,7 @@ For a video tutorial that should (hopefully) get you from git newbie to being ab
 * [What's the best way to make a new repository?](#starting)
 * [How do I push and pull without having to type my password all the time?](#passwords)
 * [What is a GitHub "issue"?](#issuing)
-* [Argh! How do I stop getting all these GitHub notification emails?!](#spam)
+* [Argh! How do I stop getting all these GitHub notification emails?!](#watching)
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [Where can I find out more?](#more)
@@ -386,7 +386,7 @@ Private repos also have issue lists attached to them, but only the people in tha
 [Back to top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="spame"></a>Argh! How do I stop getting all these GitHub notification emails?!
+#### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
 Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well. 
 However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to watch repos effectively. First though, if you only want to receive notifications about issues that you are specifically mentioned in, click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers, and other serious stakeholders. "Unwatching" is often a good choice for developers.
