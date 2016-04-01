@@ -18,6 +18,7 @@ For a video tutorial that should (hopefully) get you from git newbie to being ab
 * [What's the best way to make a new repository?](#starting)
 * [How do I push and pull without having to type my password all the time?](#passwords)
 * [What is a GitHub "issue"?](#issuing)
+* [Argh! How do I stop getting all these GitHub notification emails?!](#spam)
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [Where can I find out more?](#more)
@@ -376,11 +377,25 @@ When coding, many issues arise that need to be addressed: bugs, new features tha
 
 To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo. This is a Good Thing: you want to be able to keep up with your projects!
 
-You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow its issues, click on the "Watch" button in the top right hand corner of the repo's page.
+You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence follow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
 Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what you are working on so they can avoid wasting their time duplicating effort.
 
 Private repos also have issue lists attached to them, but only the people in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
+
+[Back to top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="spame"></a>Argh! How do I stop getting all these GitHub notification emails?!
+
+Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well. 
+However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to watch repos effectively. First though, if you only want to receive notifications about issues that you are specifically mentioned in, click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers, and other serious stakeholders. "Unwatching" is often a good choice for developers.
+
+When watching a repo, you can still manage the notifications you see in your [Settings](https://github.com/settings/notifications). *Filtering* your email is also an effective strategy: you can label/redirect GitHub messages by sender or repo name, but also by whether you are "mentioned" (by your @username) in the message. 
+
+All of the above works best if your team uses the @mention feature well. A good rule of thumb is that @mentioning someone by username in an issue is like putting them in the "To:" field of an email, while anything else is like cc'ing them: you should only expect a reply if you @mention someone. With this in mind, you can filter GitHub's emails with less concern about missing something.
+
+One last thing: because GitHub issues are usually well-separated by topic, you can very often skim and archive their notification emails very quickly. This can be very satisfying if you love rapidly clearing away emails so you don't have to look at them any more.
 
 [Back to top.](#top)
 
