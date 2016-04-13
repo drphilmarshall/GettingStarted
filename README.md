@@ -21,6 +21,8 @@ For a video tutorial that should (hopefully) get you from git newbie to being ab
 * [Argh! How do I stop getting all these GitHub notification emails?!](#watching)
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
+* [I'm told that I have a "conflict." What should I do?](#conflict)
+* [I don't seem to be able to push. What should I do?](force-push)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -420,6 +422,28 @@ A fork is a clone of the repository, in a different GitHub user's account. It co
 As soon as you fork a repository, have in mind that it is continually diverging from the base repo - because even if you are not editing the code, someone else might be! To keep your forked repo up to date, you'll need to pull in changes from the base repo from time to time. Here's what you do: 1) clone your fork with "git clone yourname:thereponame.git" as usual. This makes a local copy of the repo, and attaches the name "origin" to the remote fork at GitHub. 2) Connect your local clone to the base repo, with "git remote add upstream ownersname:thereponame.git". To see which remotes you have defined, do "git remote -v" 3) Pull in updates with eg "git pull upstream master" (which merges commits made to the master branch of the owner's repository - the base repo - into your current branch). Don't forget to do a "git status" to make sure you are in the right branch before pulling! 
 
 
+[Back to top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
+
+Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a file has been edited on the same line
+as the local copy you just committed, `git` will complain about there being a conflict, and leaves the file in a state where a) you can see both versions of the file (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the file 
+until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the file has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual. 
+
+Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix conflicts, sometimes your collaborators will - it evens out in the end. You can avoid conflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
+
+
+[Back to top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="force-push"></a>I don't seem to be able to push. What should I do?
+
+Sometimes, after trying to `git push`, you get an error message. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push. 
+
+Note: There is a way to over-ride this error message. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
+ 
+ 
 [Back to top.](#top)
 
 ----------------------------------------------------------------------
