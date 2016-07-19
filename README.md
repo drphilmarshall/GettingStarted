@@ -364,7 +364,7 @@ To turn one of your existing folders into a git repository, just do "git init" a
 
 It's best to initialize a repo with a README (so you can tell peeple what what the projekt is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
 
-In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wikiwikiwikiwikiwikiwiki associated with the repo, if you want.
+In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
 
 [Back to the tippety-top.](#top)
