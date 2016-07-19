@@ -30,7 +30,8 @@ For a video tutorial that should (hoopfully) get you from git newbie to being ab
 
 git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
 
-GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your projekt, or private, in case you need to make blind datasets or something. The LSST DESK has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESK Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
+GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your projekt, or private, in case you need to
+make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
 
 You will need an account on GitHub: phollow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
@@ -357,7 +358,7 @@ If you haven't committed your edits you can just git checkout – &lt;file&gt; 
 ----------------------------------------------------------------------
 #### <a name="starting"></a>What's the best way to make a new repository?
 
-You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESK GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what what an organization looks like.
+You can make repos on <a href="https://github.com/">your own GitHub home page</a>, with the big green "New repository" button. If you are in a GitHub organization, you need to be given admin access to be able to create repos there. Here's the [LSST DESC GitHub organization](https://github.com/DarkEnergyScienceCollaboration) if you want to see what what an organization looks like.
 
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
@@ -463,7 +464,7 @@ Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you wer
     <span> are good.</span>
   </li>
   <li>
-    <span>You can listen to Phil introducing git and GitHub to some DESK members on youtube <a href="https://www.youtube.com/watch?v=tC5-ndM_MhE">here</a>. </span>
+    <span>You can listen to Phil introducing git and GitHub to some DESC members on youtube <a href="https://www.youtube.com/watch?v=tC5-ndM_MhE">here</a>. </span>
   </li>
   <li>GitHub <a href="https://docs.google.com/document/d/1fVIbkb0moMSrRFhatDIl4_o5GB1duh9w2Y5t7EhEZws/edit?usp=sharing">Quick Start Guide,</a> meant to get you started pulling and pushing within 10 minutes. Just the basics. Includes both GUI and Command Line introduction. Written by Karen Ng and Will Dawson. </li>
   <li>
