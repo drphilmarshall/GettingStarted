@@ -391,7 +391,7 @@ you want to be able to keep up with your projekts!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence phollow its issues), as long as it is public not private.  They can aussi submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can aussi submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
 Private repos aussi have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
