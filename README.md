@@ -37,7 +37,7 @@ git is a versioning system, like svn but better. It allows you to work offline, 
 GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your projekt, or private, in case you need to
 make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
 
-You will need an account on GitHub: phollow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
+You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
 You will aussi need the unix command git to work on your local machine. 
 
@@ -487,3 +487,4 @@ Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you wer
 </ul>
 
 [Back to the tippety-top.](#top)
+
