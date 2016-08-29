@@ -25,7 +25,7 @@ pages](https://help.github.com/) are also very good.
 * [Argh! How do I stop getting all these GitHub notification emails?!](#watching)
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
-* [I'm told that I have a "konflict." What should I do?](#conflict)
+* [I'm told that I have a "conflict." What should I do?](#conflict)
 * [I don't seem to be able to push. What should I do?](force-push)
 * [Where can I find out more?](#more)
 
