@@ -5,7 +5,7 @@ Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues)
 For a video tutorial that should (hopefully) get you from git newbie to 
 being able to submit a pull request, please follow [this YouTube 
 link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help 
-pages](https://help.github.com/) are aussi very good.
+pages](https://help.github.com/) are also very good.
 
 
 ## FAQ
@@ -39,14 +39,14 @@ make blind datasets or something. The LSST DESC has an "organization" on GitHub 
 
 You will need an account on GitHub: phollow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
-You will aussi need the unix command git to work on your local machine. 
+You will also need the unix command git to work on your local machine. 
 
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="versioning"></a>Slow down. What is a "versioning system"?
 
-Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, ms.v1.tex, ms.v2.tex, ms.v3.tex, ms.final.tex, ms.final2.tex, ms.submitted.tex and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, ms.tex, while keeping track of all your old versions. It allows you to go back to them if you want. It aussi handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex, <em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.
+Ah, sorry. Imagine you are working on a document, and you want to save your old versions in case you want to go back to one of them if your plans change, or if your computer breaks down. You'd end up with a series of files called, for example, ms.v1.tex, ms.v2.tex, ms.v3.tex, ms.final.tex, ms.final2.tex, ms.submitted.tex and so on. A versioning system is a computer program that does this for you. It allows you to work on one file, ms.tex, while keeping track of all your old versions. It allows you to go back to them if you want. It also handles that situation where your collaborator makes some changes and sends you ms.v1.pjm.tex, <em>after</em> you have moved on to ms.v2.tex: it <em>merges</em> the two files together for you. Let's compare some basic usage of the git versioning system with your old way of doing things.
 
 <table>
   <tbody>
@@ -332,7 +332,7 @@ between this string and the '======' mark is the remote version, while
 the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is
 your local version. Edit the file so it is correct. Then, to resolve the
 konflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
-You will aussi want to push your change to the remote branch on, for example, a hosting service
+You will also want to push your change to the remote branch on, for example, a hosting service
 like GitHub.
 
 If you find yourself fixing complicated konflicts often,
@@ -395,9 +395,9 @@ you want to be able to keep up with your projekts!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can aussi submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
-Private repos aussi have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
+Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
 [Back to the tippety-top.](#top)
 
