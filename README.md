@@ -39,7 +39,7 @@ make blind datasets or something. The LSST DESC has an "organization" on GitHub 
 
 You will need an account on GitHub: phollow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
-You will aussi need the unix command git to work on your local machine. 
+You will also need the unix command git to work on your local machine. 
 
 [Back to the tippety-top.](#top)
 
