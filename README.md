@@ -1,6 +1,7 @@
 # <a name="top"></a>Getting Started with git and GitHub
 
-Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
+Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ! Then, practise your `git` and GitHub skills by contributing improvements to this page. 
+> Steps: fork this repo, clone it to your local machine, edit this `README.md` file, commit and push your changes, and then submit a pull request. If you can do all that, you'll know a lot of what you need to know to take part in a collaborative coding project.
 
 For a video tutorial that should (hopefully) get you from git newbie to
 being able to submit a pull request, please follow [this YouTube
