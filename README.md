@@ -9,7 +9,7 @@ link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help
 pages](https://help.github.com/) are also very good.
 
 
-## FAQ
+## FAQ: Jacob was here
 
 * [What is Git? And GitHub?](#whatisgit)
 * [Slow down. What is a "versioning system"?](#versioning)
