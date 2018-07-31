@@ -25,6 +25,8 @@ For a video tutorial that should (hopefully) get you from git newbie to being ab
 ----------------------------------------------------------------------
 #### <a name="whatisgit"></a>What is Git? And GitHub?
 
+Go Standord, Beat Cal
+
 
 git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
 
