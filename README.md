@@ -1,6 +1,6 @@
 # <a name="top"></a>Getting Started with git and GitHub
 
-Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
+Ok this is good to have done use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
 
 For a video tutorial that should (hopefully) get you from git newbie to being able to submit a pull request, please follow [this YouTube link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help pages](https://help.github.com/) are also very good.
 
