@@ -27,7 +27,7 @@ pages](https://help.github.com/) are also very good.
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [I'm told that I have a "conflict." What should I do?](#conflict)
-* [I don't seem to be able to push. What should I do?](force-push)
+* [I don't seem to be able to push. What should I do?](#force-push)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
