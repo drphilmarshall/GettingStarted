@@ -28,6 +28,7 @@ pages](https://help.github.com/) are also very good.
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [I'm told that I have a "conflict." What should I do?](#conflict)
 * [I don't seem to be able to push. What should I do?](#force-push)
+* [How can I add just some of my changes as a commit?](#add-p)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -464,6 +465,35 @@ whatever changes are currently on the remote repo.
 
 Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="add-p"></a>How can I add just some of my changes as a commit?
+
+Often, you may be working on some aspect of your code, and you see some other change that also
+needs to be made (e.g. a documentation typo), but which isn't really related to what you are
+working on.  If you care about having atomic commits, then you may want to make that other
+change as a separate commit.
+
+The easiest way to do this is to use `git add -p`.
+
+This will prompt you about each of the changes you have staged locally and ask whether you
+want to stage them to be committed.  You have several options each time.  Normally `y` or `n`
+is all you need to select that hunk or not.  Soemtimes, git's idea of what the right hunk is
+is too long, so you need to do `s` to split it into smaller hunks.  Sometimes, you know that
+everything in some file should be added, so `a` will save some time.  Or `d` will skip everything
+else in the current file, and `q` will skip everything else left.
+
+Once you are done selecting hunks to be committed, you can check that you did it right with
+`git diff --staged`, which will show you your staged changes.  You can add more with
+`git add -p` again if you think you missed something.  If you messed something up, you can
+do `git reset` to start over.  (This just resets what is staged; all the local changes are
+still there.)
+
+If you are happy with the staged changes, you can then commit them with `git commit`.
+The rest of the local changes will still be there, and you can do the process again to
+select some or all of them for another commit.
 
 [Back to the top.](#top)
 
