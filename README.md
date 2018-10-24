@@ -31,6 +31,7 @@ pages](https://help.github.com/) are also very good.
 * [How can I add just some of my changes as a commit?](#add-p)
 * [How can I edit the commit message of a previous commit?](#amend)
 * [How can I change the content of a previous commit?](#amend2)
+* [What should I put in my .gitconfig file?](#gitconfig)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -579,6 +580,102 @@ pick a8f7352 Fix documentation error in some_function
 When you exit this screen, it will replay the commits in this order, squashing the
 changes in the first three commits into a single commit.  It will also open up an
 editor window so you can edit the commit message for the new merged commit.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="gitconfig"></a>What should I put in my .gitconfig file?
+
+The file `.gitconfig` (in your home directory) is where you can set some settings for
+how git will behave when doing various commands.  You can also store repo-specific
+configurations in `.git/config` in the repository where you want the changed settings
+to apply, but most of the time, you'll prefer to just set your preferences once in
+`$HOME/.gitconfig` and use them for all your various repos.
+
+Some items that probably everyone should have in their .gitconfig file are:
+```
+[user]
+    name = Your Name
+    email = your@email.address
+[color]
+    ui = auto
+[core]
+    editor = vim or emacs or "subl -n -w" or ...
+```
+The user field tells git who you are.  You probably already set that up when you started using
+git.  The color field sets how git colors things.  The auto option is pretty good and probably
+fine for most users.  Finally, you should tell git which editor you prefer to use when it opens
+up an edit window.
+
+You can also alias common commands into something shorter if you want.  Some common ones are:
+```
+[alias]
+    st = status
+    br = branch -a --no-merged
+    co = checkout
+    ds = diff --staged
+    lg = log -p
+    ls = ls-files
+```
+
+There are also some more complicated things that people have worked out as something that can
+be aliased, which you might find useful:
+
+Prettier logs with graphs and markers for tags and such:
+```
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+```
+
+Find the child commit of your current location.  The reverse of `git reset HEAD^`.
+(Useful when trying to track a bug down.)
+```
+    # Get the child commit of the current commit.
+    # Use $1 instead of 'HEAD' if given. Use $2 instead of curent branch if given.
+    child = "!bash -c 'git log --format=%H --reverse --ancestry-path ${1:-HEAD}..${2:\"$(git rev-parse --abbrev-ref HEAD)\"} | head -1' -"
+```
+
+Track the changes to a specific line or lines of a file through the git history.
+```
+    # Follow evolution of certain lines in a file
+    # arg1=file, arg2=first line, arg3=last line or blank for just the first line
+    follow = "!sh -c 'git log --topo-order -u -L $2,${3:-$2}:"$1"'" -
+```
+
+Delete all the old branches that have already been merged to master, so don't need to stick around anymore.
+```
+    # cf. http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master' | xargs -n 1 git branch -d"
+```
+
+Some other settings that you might consider adding to your .gitconfig:
+
+Show the diff as a comment in the editor window for reference when you are writing your
+commit message.
+```
+[commit]
+    verbose = true
+```
+
+Automatically stash your local uncommitted changes when doing `pull -r` (or any rebase).
+```
+[rebase]
+    autostash = true
+```
+
+Have `git shash show` show you the full patch, rather than just which files are changed.
+```
+[stash]
+    showPatch = true
+```
+
+Use a better heuristic when `git diff` is trying to figure out which lines are connected
+together as new changes.
+```
+[diff]
+    indentHeuristic = true
+```
 
 [Back to the top.](#top)
 
