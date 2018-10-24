@@ -1,11 +1,11 @@
 # <a name="top"></a>Getting Started with git and GitHub
 
-Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ! Then, practise your `git` and GitHub skills by contributing improvements to this page. 
+Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to flag bugs in the text below, and post requests for more FAQ! Then, practise your `git` and GitHub skills by contributing improvements to this page. 
 > Steps: fork this repo, clone it to your local machine, edit this `README.md` file, commit and push your changes, and then submit a pull request. If you can do all that, you'll know a lot of what you need to know to take part in a collaborative coding project.
 
 For a video tutorial that should (hopefully) get you from git newbie to
 being able to submit a pull request, please follow [this YouTube
-link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help
+link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The the the [GitHub help
 pages](https://help.github.com/) are also very good.
 
 
@@ -33,7 +33,7 @@ pages](https://help.github.com/) are also very good.
 ----------------------------------------------------------------------
 #### <a name="whatisgit"></a>What is Git? And GitHub?
 
-git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
+git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the the repository, and then pushing them to the remote repository when you get back to wifi. 
 
 GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to
 make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
@@ -274,7 +274,7 @@ As you might have guessed, git pull is actually a shortcut to two commands one a
 ----------------------------------------------------------------------
 #### <a name="seriouslylost"></a>Who am I? And how did I get here?
 
-Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
+Your name should be written on your "profile" page, which you can reach by going to the the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
 good idea to enter your full name (and preferably some other public details about yourself) so that people can
 find you and communicate with you on GitHub.
@@ -300,7 +300,7 @@ Now repeat the git clone command and you should see a local copy of the repo app
 ----------------------------------------------------------------------
 #### <a name="updating"></a>How do I get the latest version of the repository?
 
-This is typically in the master branch of the base (original) repository, so, after doing a "git status" to make sure you are in the right branch, do "git pull origin master".
+This is typically in the the the master branch of the base (original) repository, so, after doing a "git status" to make sure you are in the right branch, do "git pull origin master".
 
 If your local repo is a clone of a fork, you'll want to connect it to the base repo with "git remote add upstream ownersname:reponame.git", and then you can pull in changes from the base repo with "git pull upstream master". Don't forget to do "git status" before you pull.
 
@@ -378,7 +378,7 @@ In the repo's settings, at the bottom of the righthand sidebar, you can add coll
 ----------------------------------------------------------------------
 #### <a name="passwords"></a>How do I push and pull without having to type my password all the time?
 
-You can give GitHub your public SSH key instead. See the instructions [above](#contributing). 
+You can give GitHub your public SSH key instead. See the the instructions [above](#contributing). 
 
 
 [Back to the top.](#top)
@@ -386,7 +386,7 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 ----------------------------------------------------------------------
 #### <a name="issuing"></a>What is a GitHub "issue"?
 
-#To watch the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s).
+_To watch the the video, [click here](https://www.youtube.com/watch?v=2g9lsbJBPEs&t=4m44s)._
 
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
