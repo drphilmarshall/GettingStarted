@@ -30,6 +30,7 @@ pages](https://help.github.com/) are also very good.
 * [I don't seem to be able to push. What should I do?](#force-push)
 * [How can I add just some of my changes as a commit?](#add-p)
 * [How can I edit the commit message of a previous commit?](#amend)
+* [How can I change the content of a previous commit?](#amend2)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -528,6 +529,56 @@ since that's just informational.  It won't get saved back to the commit if you e
 
 Once you close that screen, git will run through the commits you selected.  For any that
 you selected with `r`, it will open up an editor window, so you can edit the message.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="amend2"></a>How can I change the content of a previous commit?
+
+Sometimes you may notice that you missed changing something about your code that is very
+related to the set of changes you just committed, so they really belong together to make
+a single atomic commit.  It's then a good idea to do that and make the commit contain all
+of the changes relevant to that single idea.
+
+To change the most recent commit, this is quite easy.  Just make the changes as though
+you were going to make a new commit and stage them (e.g. with `git add -p`).
+But then rather than a regular `git commit`, do `git commit --amend`.
+
+This will merge in all the changes you made on top of the ones that were already in the
+previous commit and turn the combination into a single commit.  It will also open up the
+editor window so you have the option to change the commit message.  If you just exit,
+it will keep the previous message.
+
+It's a little bit trickier to edit the content of a commit prior to the most recent one.
+And if that previous commit is already pushed to the remote repo, then you should probably
+not change it.  But if it is still local on your machine, then it is completely fine to
+edit the previous set of changes to include the new thing you want to add.
+
+The most straightforward way to do this is first to add the changes you want to make
+as a new commit.  Then run `git rebase -i`.  This will open up a window showing all
+of your unpushed commits.  It might look something like the following:
+```
+pick a6d4238 Add a new feature to my_class
+pick e607852 Speed up code in my_other_class
+pick a8f7352 Fix documentation error in some_function
+pick 9db5bba Add a unit test for the new feature
+pick f3739c0 Fix a bug in the new feature that unit test discovered
+```
+That bug fix (and possibly the unit test) should probably be combined with the original
+commit that added the new feature.  The way you do that is to reorder the lines on this
+screen, and change the `pick` to `s` (or `squash`) for the ones that you want to merge
+into the previous picked commit.  E.g.
+```
+pick a6d4238 Add a new feature to my_class
+s 9db5bba Add a unit test for the new feature
+s f3739c0 Fix a bug in the new feature that unit test discovered
+pick e607852 Fix a bug in my_other_class
+pick a8f7352 Fix documentation error in some_function
+```
+When you exit this screen, it will replay the commits in this order, squashing the
+changes in the first three commits into a single commit.  It will also open up an
+editor window so you can edit the commit message for the new merged commit.
 
 [Back to the top.](#top)
 
