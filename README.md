@@ -29,6 +29,7 @@ pages](https://help.github.com/) are also very good.
 * [I'm told that I have a "conflict." What should I do?](#conflict)
 * [I don't seem to be able to push. What should I do?](#force-push)
 * [How can I add just some of my changes as a commit?](#add-p)
+* [How can I edit the commit message of a previous commit?](#amend)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -494,6 +495,39 @@ still there.)
 If you are happy with the staged changes, you can then commit them with `git commit`.
 The rest of the local changes will still be there, and you can do the process again to
 select some or all of them for another commit.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="amend"></a>How can I edit the commit message of a previous commit?
+
+It is not uncommon to make a commit and then after hitting enter notice that you mistyped
+something in the message, and you'd like to change it.  Fortunately, it is quite easy
+to fix it if you don't want other people to see your typos.
+
+Just type `git commit --amend`.
+
+This will open up an editor window where you can edit the message of the most recent commit.
+
+Sometimes, you'll notice an error in the message of some past commit farther back than
+just the most recent one.  Maybe from perusing your `git log`.  If the commit has already
+been pushed to the repo, you should probably just let it go.  It's not particularly safe to
+edit commits that are already pushed to the repo, since someone else may have downloaded
+it, and so pushing a change (which would require a `--force` option) would bring people
+out of sync.  That's not polite, so you should avoid that.
+
+However, if the commit is still unpushed, then it is safe to edit without messing up anyone
+else.  The way to do this is `git rebase -i`.  This opens up a list of all the commits that
+have not yet been pushed to the remote and gives you the option to make various edits to them.
+
+Each commit will have the word `pick` at the start of the line.  This means the rebase will
+apply that commit as is.  To edit the commit message, change that `pick` to `r` (or `reword`
+but just `r` is simpler).  Don't bother to edit the commit message yet in this screen,
+since that's just informational.  It won't get saved back to the commit if you edit it here.
+
+Once you close that screen, git will run through the commits you selected.  For any that
+you selected with `r`, it will open up an editor window, so you can edit the message.
 
 [Back to the top.](#top)
 
