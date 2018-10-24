@@ -456,6 +456,12 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 
 Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
+In many cases, rather than simply `git pull` in this case, you should do `git pull -r`.  This
+will avoid making a merge commit, which can lead to complicated histories.  Instead,
+`git pull -r` will do a rebase instead of a merge.  This means that it will replay your changes
+on top of the new tip of the branch as if you had started making those changes after 
+whatever changes are currently on the remote repo.
+
 Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 
