@@ -5,8 +5,8 @@ Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues)
 
 For a video tutorial that should (hopefully) get you from git newbie to
 being able to submit a pull request, please follow [this YouTube
-link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The the the [GitHub help
-pages](https://help.github.com/) are also very good.
+link](https://www.youtube.com/watch?v=2g9lsbJBPEs). You can also work through Humna Awan's excellent [tutorial notebook](https://github.com/humnaawan/git-tutorial). For reference, the the the [GitHub help
+pages](https://help.github.com/) are very good.
 
 
 ## FAQ
