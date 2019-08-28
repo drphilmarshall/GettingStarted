@@ -27,7 +27,11 @@ pages](https://help.github.com/) are very good.
 * [What is a "Pull Request"?](#pullrequests)
 * [What's the difference between a "Fork" and a "Branch"?](#forks)
 * [I'm told that I have a "conflict." What should I do?](#conflict)
-* [I don't seem to be able to push. What should I do?](force-push)
+* [I don't seem to be able to push. What should I do?](#force-push)
+* [How can I add just some of my changes as a commit?](#add-p)
+* [How can I edit the commit message of a previous commit?](#amend)
+* [How can I change the content of a previous commit?](#amend2)
+* [What should I put in my .gitconfig file?](#gitconfig)
 * [Where can I find out more?](#more)
 
 ----------------------------------------------------------------------
@@ -456,8 +460,222 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 
 Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
+In many cases, rather than simply `git pull` in this case, you should do `git pull -r`.  This
+will avoid making a merge commit, which can lead to complicated histories.  Instead,
+`git pull -r` will do a rebase instead of a merge.  This means that it will replay your changes
+on top of the new tip of the branch as if you had started making those changes after 
+whatever changes are currently on the remote repo.
+
 Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+#### <a name="add-p"></a>How can I add just some of my changes as a commit?
+
+Often, you may be working on some aspect of your code, and you see some other change that also
+needs to be made (e.g. a documentation typo), but which isn't really related to what you are
+working on.  If you care about having atomic commits, then you may want to make that other
+change as a separate commit.
+
+The easiest way to do this is to use `git add -p`.
+
+This will prompt you about each of the changes you have staged locally and ask whether you
+want to stage them to be committed.  You have several options each time.  Normally `y` or `n`
+is all you need to select that hunk or not.  Soemtimes, git's idea of what the right hunk is
+is too long, so you need to do `s` to split it into smaller hunks.  Sometimes, you know that
+everything in some file should be added, so `a` will save some time.  Or `d` will skip everything
+else in the current file, and `q` will skip everything else left.
+
+Once you are done selecting hunks to be committed, you can check that you did it right with
+`git diff --staged`, which will show you your staged changes.  You can add more with
+`git add -p` again if you think you missed something.  If you messed something up, you can
+do `git reset` to start over.  (This just resets what is staged; all the local changes are
+still there.)
+
+If you are happy with the staged changes, you can then commit them with `git commit`.
+The rest of the local changes will still be there, and you can do the process again to
+select some or all of them for another commit.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="amend"></a>How can I edit the commit message of a previous commit?
+
+It is not uncommon to make a commit and then after hitting enter notice that you mistyped
+something in the message, and you'd like to change it.  Fortunately, it is quite easy
+to fix it if you don't want other people to see your typos.
+
+Just type `git commit --amend`.
+
+This will open up an editor window where you can edit the message of the most recent commit.
+
+Sometimes, you'll notice an error in the message of some past commit farther back than
+just the most recent one.  Maybe from perusing your `git log`.  If the commit has already
+been pushed to the repo, you should probably just let it go.  It's not particularly safe to
+edit commits that are already pushed to the repo, since someone else may have downloaded
+it, and so pushing a change (which would require a `--force` option) would bring people
+out of sync.  That's not polite, so you should avoid that.
+
+However, if the commit is still unpushed, then it is safe to edit without messing up anyone
+else.  The way to do this is `git rebase -i`.  This opens up a list of all the commits that
+have not yet been pushed to the remote and gives you the option to make various edits to them.
+
+Each commit will have the word `pick` at the start of the line.  This means the rebase will
+apply that commit as is.  To edit the commit message, change that `pick` to `r` (or `reword`
+but just `r` is simpler).  Don't bother to edit the commit message yet in this screen,
+since that's just informational.  It won't get saved back to the commit if you edit it here.
+
+Once you close that screen, git will run through the commits you selected.  For any that
+you selected with `r`, it will open up an editor window, so you can edit the message.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="amend2"></a>How can I change the content of a previous commit?
+
+Sometimes you may notice that you missed changing something about your code that is very
+related to the set of changes you just committed, so they really belong together to make
+a single atomic commit.  It's then a good idea to do that and make the commit contain all
+of the changes relevant to that single idea.
+
+To change the most recent commit, this is quite easy.  Just make the changes as though
+you were going to make a new commit and stage them (e.g. with `git add -p`).
+But then rather than a regular `git commit`, do `git commit --amend`.
+
+This will merge in all the changes you made on top of the ones that were already in the
+previous commit and turn the combination into a single commit.  It will also open up the
+editor window so you have the option to change the commit message.  If you just exit,
+it will keep the previous message.
+
+It's a little bit trickier to edit the content of a commit prior to the most recent one.
+And if that previous commit is already pushed to the remote repo, then you should probably
+not change it.  But if it is still local on your machine, then it is completely fine to
+edit the previous set of changes to include the new thing you want to add.
+
+The most straightforward way to do this is first to add the changes you want to make
+as a new commit.  Then run `git rebase -i`.  This will open up a window showing all
+of your unpushed commits.  It might look something like the following:
+```
+pick a6d4238 Add a new feature to my_class
+pick e607852 Speed up code in my_other_class
+pick a8f7352 Fix documentation error in some_function
+pick 9db5bba Add a unit test for the new feature
+pick f3739c0 Fix a bug in the new feature that unit test discovered
+```
+That bug fix (and possibly the unit test) should probably be combined with the original
+commit that added the new feature.  The way you do that is to reorder the lines on this
+screen, and change the `pick` to `s` (or `squash`) for the ones that you want to merge
+into the previous picked commit.  E.g.
+```
+pick a6d4238 Add a new feature to my_class
+s 9db5bba Add a unit test for the new feature
+s f3739c0 Fix a bug in the new feature that unit test discovered
+pick e607852 Fix a bug in my_other_class
+pick a8f7352 Fix documentation error in some_function
+```
+When you exit this screen, it will replay the commits in this order, squashing the
+changes in the first three commits into a single commit.  It will also open up an
+editor window so you can edit the commit message for the new merged commit.
+
+[Back to the top.](#top)
+
+----------------------------------------------------------------------
+
+#### <a name="gitconfig"></a>What should I put in my .gitconfig file?
+
+The file `.gitconfig` (in your home directory) is where you can set some settings for
+how git will behave when doing various commands.  You can also store repo-specific
+configurations in `.git/config` in the repository where you want the changed settings
+to apply, but most of the time, you'll prefer to just set your preferences once in
+`$HOME/.gitconfig` and use them for all your various repos.
+
+Some items that probably everyone should have in their .gitconfig file are:
+```
+[user]
+    name = Your Name
+    email = your@email.address
+[color]
+    ui = auto
+[core]
+    editor = vim or emacs or "subl -n -w" or ...
+```
+The user field tells git who you are.  You probably already set that up when you started using
+git.  The color field sets how git colors things.  The auto option is pretty good and probably
+fine for most users.  Finally, you should tell git which editor you prefer to use when it opens
+up an edit window.
+
+You can also alias common commands into something shorter if you want.  Some common ones are:
+```
+[alias]
+    st = status
+    br = branch -a --no-merged
+    co = checkout
+    ds = diff --staged
+    lg = log -p
+    ls = ls-files
+```
+
+There are also some more complicated things that people have worked out as something that can
+be aliased, which you might find useful:
+
+Prettier logs with graphs and markers for tags and such:
+```
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=local
+```
+
+Find the child commit of your current location.  The reverse of `git reset HEAD^`.
+(Useful when trying to track a bug down.)
+```
+    # Get the child commit of the current commit.
+    # Use $1 instead of 'HEAD' if given. Use $2 instead of curent branch if given.
+    child = "!bash -c 'git log --format=%H --reverse --ancestry-path ${1:-HEAD}..${2:\"$(git rev-parse --abbrev-ref HEAD)\"} | head -1' -"
+```
+
+Track the changes to a specific line or lines of a file through the git history.
+```
+    # Follow evolution of certain lines in a file
+    # arg1=file, arg2=first line, arg3=last line or blank for just the first line
+    follow = "!sh -c 'git log --topo-order -u -L $2,${3:-$2}:"$1"'" -
+```
+
+Delete all the old branches that have already been merged to master, so don't need to stick around anymore.
+```
+    # cf. http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master' | xargs -n 1 git branch -d"
+```
+
+Some other settings that you might consider adding to your .gitconfig:
+
+Show the diff as a comment in the editor window for reference when you are writing your
+commit message.
+```
+[commit]
+    verbose = true
+```
+
+Automatically stash your local uncommitted changes when doing `pull -r` (or any rebase).
+```
+[rebase]
+    autostash = true
+```
+
+Have `git shash show` show you the full patch, rather than just which files are changed.
+```
+[stash]
+    showPatch = true
+```
+
+Use a better heuristic when `git diff` is trying to figure out which lines are connected
+together as new changes.
+```
+[diff]
+    indentHeuristic = true
+```
 
 [Back to the top.](#top)
 
