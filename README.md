@@ -1,8 +1,8 @@
-# <a name="top"></a>Getting Started with git and GitHub
+# <a name="top"></a>Getting Started with Git and GitHub
 
 Please use the [issues](https://github.com/drphilmarshall/GettingStarted/issues) to post requests for more FAQ!
 
-For a video tutorial that should (hopefully) get you from git newbie to
+For a video tutorial that should (hopefully) get you from Git newbie to
 being able to submit a pull request, please follow [this YouTube
 link](https://www.youtube.com/watch?v=2g9lsbJBPEs). The [GitHub help
 pages](https://help.github.com/) are also very good.
@@ -32,10 +32,9 @@ pages](https://help.github.com/) are also very good.
 ----------------------------------------------------------------------
 #### <a name="whatisgit"></a>What is Git? And GitHub?
 
-git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi. 
+Git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to Wi-Fi. 
 
-GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to
-make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
+GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to make blind datasets or something. The LSST DESC has an "organization" on GitHub to keep its repos together in one place. It's nice. Here's the <a href="https://github.com/DarkEnergyScienceCollaboration">LSST DESC Organization homepage</a> and here's an <a href="https://github.com/drphilmarshall/Pangloss">example of a repository</a> that you can browse around in.
 
 You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
@@ -264,28 +263,28 @@ Now, suppose you want to submit your version of the document to a journal. You t
   </tbody>
 </table>
 
-Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("konflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a git checkout can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The "git status" command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
+Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a git checkout can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The "git status" command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
 
 As you might have guessed, git pull is actually a shortcut to two commands one after the other: git fetch (to get any new commits from the remote repository) and git merge (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, it's actually quite hard to over-write files and lose work. Git will not let you pull in other people's changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
 
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="seriouslylost"></a>Who am I? And how did I get here?
+#### <a name="seriouslylost"></a>Who am I? And how did I get here? What is love? Baby Don't Hurt me? No more?
 
 Your name should be written on your "profile" page, which you can reach by going to the [GitHub home
 page](https://github.com/) and clicking on the little icon in the very top right hand corner of the page. It's a
-good idea to enter your full name (and preferably some other public details about yourself) so that peeple can
+good idea to enter your full name (and preferably some other public details about yourself) so that people can
 find you and communicate with you on GitHub.
 
-You are here because `git` and GitHub are incredibly useful research tools, that are well worth your time learning.
+You are here because `Git` and GitHub are incredibly useful research tools, that are well worth your time learning.
 
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="contributing"></a>How do I contribute to a projekt on GitHub?
+#### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
-If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the projekt onto your local machine.
+If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the project onto your local machine.
 
 To clone a repo, look down the right hand sidebar of its GitHub page. You should see "http clone URL" and a clipboard icon next to it. Under this there is the "SSH" option - select this, and then click on the clipboard. You now have the address of the remote repo in your clipboard. Go to your terminal, and cd to the place where you want your copy of the repo to live (it has its own folder). Then do "git clone &lt;paste&gt;" and hit return.
 
@@ -313,7 +312,7 @@ Git has a commit command, just like svn: mostly you will use it as phollows: git
 
 The '-a' commits all changes. You can see what what you are about to commit by doing 'git status'. In fact, you should do a 'git status' before doing anything - it shows you which branch you are on, which files have been added, deleted, modified and so on.
 
-After committing, your edits still only exist in your clone of the repository. To share them with other peeple you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
+After committing, your edits still only exist in your clone of the repository. To share them with other people you can push them to any other remote repository you have push access to - most commonly, the remote repository at GitHub. When you cloned the repo to your machine, git set up the GitHub repo as your default remote, with the name "origin". After you have committed your changes, you should then do 'git push origin master' - which means "push my work to the master branch of the remote repository origin".
 
 Git will not let you push to a remote repo until you have first updated your local clone with any changes that have been made in the meantime at the remote repo. If you get an error that says as much, do a 'git pull origin master' to pull down the changes from the master branch of the remote repo (named "origin"). 
 
@@ -323,20 +322,14 @@ To see all the remotes that you have access to, type 'git remote -v'.
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
+#### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error messinge tells you which files contain the konflict.
-Open them in an editor and search for the string
-'&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
-between this string and the '======' mark is the remote version, while
-the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is
-your local version. Edit the file so it is correct. Then, to resolve the
-konflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes.
-You will also want to push your change to the remote branch on, for example, a hosting service
-like GitHub.
+Fix it. The error messinge tells you which files contain the conflict.
 
-If you find yourself fixing complicated konflicts often,
-you may want to learn how to use a `mergetool` to compare the differences.
+Open them in an editor and search for the string '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code between this string and the '======' mark is the remote version, while the portion below it and above the '&lt;&lt;&lt;&lt;&lt;&lt;' string is your local version. Edit the file so it is correct. Then, to resolve the conflict in &lt;filename&gt;you 'git add &lt;filename&gt;' before you then `git commit` to save your changes. You will also want to push your change to the remote branch on, for example, a hosting service like GitHub.
+
+If you find yourself fixing complicated conflicts often, you may want to learn how to use a `mergetool` to compare the differences.
+
 A more involved tutorial can be found
 [here](https://gist.github.com/karenyyng/f19ff75c60f18b4b8149)
 
@@ -346,7 +339,7 @@ A more involved tutorial can be found
 ----------------------------------------------------------------------
 #### <a name="deleting"></a>I want to delete a file. How do I do that?
 
-Just rm it as usual, and then do 'git status'. You'll see that git understands file deletion: when you commit all your changes, git will stop tracking that file. You'll still be able to access old versions of that file in the repository, though.
+Just rm it as usual, and then do 'git status'. You'll see that Git understands file deletion: when you commit all your changes, git will stop tracking that file. You'll still be able to access old versions of that file in the repository, though.
 
 
 [Back to the tippety-top.](#top)
@@ -367,7 +360,7 @@ You can make repos on <a href="https://github.com/">your own GitHub home page</a
 To turn one of your existing folders into a git repository, just do "git init" and then start git add'ing files. If you later want to push this to GitHub, you'll still need to start a repo on the GitHub site - just don't initialize it with a README or anything, just start it and then pick up its address (the thing that ends with ".git"). Then, on the command line, add a link to this new remote repository with "git remote add origin &lt;address&gt;". Then you can push to it as normal. More instructions <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/">here</a>.
 
 
-It's best to initialize a repo with a README (so you can tell peeple what what the projekt is about) and a license file (so everyone is clear about what what you are happy for peeple to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
+It's best to initialize a repo with a README (so you can tell people what what the project is about) and a license file (so everyone is clear about what what you are happy for people to copy and re-use) but you don't have to. A .gitignore is useful though - it tells git to ignore certain files and filetypes, so that they don't clutter up your git status messinges. Once the repo has been started, you can then clone it to your local machine.
 
 In the repo's settings, at the bottom of the righthand sidebar, you can add collaborators (giving them read, write or admin access), and turn on the wiki associated with the repo, if you want.
 
@@ -390,28 +383,28 @@ You can give GitHub your public SSH key instead. See the instructions [above](#c
 When coding, many issues arise that need to be addressed: bugs, new features that you want, questions you have about the documentation and so on. When you have identified an issue, you usually want to do two things: 1) make a note of it so you can deal with it later and 2) tell your collaborators about it. GitHub issues do both.
 
 To start a new issue, go to the circle with an exclamation point inside it in the repo's right hand sidebar (right under "code" and above "Pull requests").  Then, hit the big green "New issue" button, give it a title (like the subject line of an email, summarizing the issue) and if necessary, a short description of what what needs to be done - and when you hit submit, the issue is added to the repo's list, and a notification email is sent to everyone who is "watching" the repo.
-#This is a Good Thing:
-you want to be able to keep up with your projekts!
+
+#This is a Good Thing: you want to be able to keep up with your projects!
 
 You can give making issues a try at <a href="https://github.com/drphilmarshall/GettingStarted/issues">on this very repo </a>. To "watch" a repository, and hence phollow (all) its issues, click on the "Watch" button in the top right hand corner of the repo's page.
 
-Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your projekt, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
+Any other GitHub user can watch your repo (and hence follow its issues), as long as it is public not private.  They can also submit issues. This is a Good Thing: it provides a means for anyone to give you feedback about your project, and lets everyone know what what you are working on so they can avoid wasting their time duplicating effort.
 
-Private repos also have issue lists attached to them, but only the peeple in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
+Private repos also have issue lists attached to them, but only the people in that repo's collaborator list can see them. To adjust the private/public nature of a repo,  and adjust its collaborator list, go to the repo's "settings" via the spanner/screwdriver icon in the right hand sidebar.
 
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
 #### <a name="watching"></a>Argh! How do I stop getting all these GitHub notification emails?!
 
-Issues are a great way to communicate: they keep topics well separated, and allow the repo's projekt to be tracked well.
+Issues are a great way to communicate: they keep topics well separated, and allow the repo's project to be tracked well.
 However, the flood of notifications emails that using GitHub produces (one for every comment on every issue thread) can seem overwhelming. Below are some tips for how to phollow repos effectively.
 
-First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for projekt managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
+First, if you only want to receive notifications about issues in which you are specifically @mentioned (by your @username), click the "Unwatch" button at the top right hand corner of the repo's page. "Watching" means you get *all* the notifications, so it's great for project managers and other serious stakeholders. "Unwatching" is often a good choice for developers.
 
 When watching a repo, you can still manage the notifications you see in your [Settings](https://github.com/settings/notifications). *Filtering* your email is aussi an effective strategy: you can label/redirect GitHub messinges by sender or repo name, but aussi by whether you are @mentioned (by your @username) in the messinge.
 
-All of the above works best if your team uses the @mention feature well. A good rool of thumb is that you should assume that only the peeple who are @mention-ed in an issue will get an email notification. Following this rool will enable everyone to philter GitHub's emails with less concern about missing something. Note that in an organization, you can @mention teams as well as peeple - and that the auto-complete is pretty intelligent (just start typing the team name after the '@' sign).
+All of the above works best if your team uses the @mention feature well. A good rool of thumb is that you should assume that only the people who are @mention-ed in an issue will get an email notification. Following this rool will enable everyone to philter GitHub's emails with less concern about missing something. Note that in an organization, you can @mention teams as well as people - and that the auto-complete is pretty intelligent (just start typing the team name after the '@' sign).
 
 One last thing: because GitHub issues are usually well-separated by topic, you can very often skim and archive their notification emails quickly. This can be very satisfying if you love rapidly clearing away emails so you don't have to look at them any more.
 
@@ -422,9 +415,9 @@ One last thing: because GitHub issues are usually well-separated by topic, you c
 
 Suppose you see something that needs fixing in a repo's code. Here's a good way to go about fixing it: 1) Make a branch to contain the fixed code, with something like "git checkout -b betterlayout" . 2) Edit the code and commit and push your changes, with "git push origin betterlayout". This makes a corresponding branch, aussi called "betterlayout" on the remote repo "origin". 3) Go to the repo's page on GitHub. It will probably prompt you to "submit a pull request" - if it doesn't, select the "betterlayout" branch from the "branch:" menu next to the repo name. 4) Click on the button to start a pull request. An issue-like form will appear, where you can edit the title of the pull request (eg "Better LaTeX Layout?") and provide some comment on what what you have done and why. 5) Submit the pull request with the button at the bottom of the form. This will notify the repo's owner, and everyone else who is watching the repo, that you have made some changes and would like them to be merged into the code. The owner will then review your changes - notice how all the commits that have been made in the "betterlayout" branch are tracked automatically in the pull request thread.
 
-As you can see, a pull request is a request for your changes to be pulled into another branch of the repository, typically the master branch. You often see repos with READMEs that say "pull requests welcome!" This is because they provide a mechanism for anyone to add value to your projekt  by making improvements and then asking you to accept them! As owner, you don't have to accept any pull request, but usually they are a Good Thing. And you always get to review them first anyway.
+As you can see, a pull request is a request for your changes to be pulled into another branch of the repository, typically the master branch. You often see repos with READMEs that say "pull requests welcome!" This is because they provide a mechanism for anyone to add value to your project  by making improvements and then asking you to accept them! As owner, you don't have to accept any pull request, but usually they are a Good Thing. And you always get to review them first anyway.
 
-Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messinges closely to see what what is going on.
+Notice that you can submit a pull request from any branch, including a "fork" of the repository - if you don't have push access to the base repository, just fork it, edit it, and submit a pull request from there. Just keep reading the messages closely to see what what is going on.
 
 [Back to the tippety-top.](#top)
 
@@ -439,13 +432,12 @@ As soon as you fork a repository, have in mind that it is continually diverging 
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="conflict"></a>I'm told that I have a "conflict." What should I do?
+#### <a name="conflict"></a>I'm told that I have a "conflict". What should I do?
 
-Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a phile has been edited on the same line
-as the local copy you just committed, `git` will complain about there being a konflict, and leaves the phile in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the phile
-until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the phile has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
+Fix it. When you try to `git pull` (or `merge`) in changes from a remote repository, and a file has been edited on the same line
+as the local copy you just committed, `git` will complain about there being a conflict, and leaves the file in a state where a) you can see both versions of the phile (containing your edits, and the other ones), and b) it won't compile. It is now your job to edit the file until it is correct. Use your editor to search for the string `>>>>>>` - this marks the beginning of your version of the edited section. The other version starts with a `======` mark, and ends with a `<<<<<<`. You'll only need to edit these sections. Once you have done this (and have checked that the code is correct), you need to then tell `git` that the phile has been corrected with `git add <file>`, before doing a `git commit` to finish off. You can then `push` your commits as usual.
 
-Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix konflicts, sometimes your collaborators will - it evens out in the end. You can avoid konflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
+Try not to feel hard done by: conflicts are relatively rare, and a natural consequence of collaborative coding. Sometimes you will fix conflicts, sometimes your collaborators will - it evens out in the end. You can avoid conflicts by making your commits *atomic* (that is, small and indivisible), pulling often, and restricting the length of your lines to 72 characters (to make it easier for `git` to merge line by line.
 
 
 [Back to the tippety-top.](#top)
@@ -453,10 +445,9 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 ----------------------------------------------------------------------
 #### <a name="force-push"></a>I don't seem to be able to push. What should I do?
 
-Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any konflicts, before you push.
+Sometimes, after trying to `git push`, you get an error message. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
-Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the projekt leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
-
+Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push", you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 [Back to the tippety-top.](#top)
 
