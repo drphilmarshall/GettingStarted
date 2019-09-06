@@ -324,8 +324,7 @@ To see all the remotes that you have access to, type 'git remote -v'.
 
 ----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a konflict. What do I do?
-
-Fix it. The error messinge tells you which files contain the konflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. Just like in svn, the portion of code
 between this string and the '======' mark is the remote version, while
