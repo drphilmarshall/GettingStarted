@@ -283,7 +283,7 @@ You are here because `git` and GitHub are incredibly useful research tools, that
 [Back to the tippety-top.](#top)
 
 ----------------------------------------------------------------------
-#### <a name="contributing"></a>How do I contribute to a projekt on GitHub?
+#### <a name="contributing"></a>How do I contribute to a project on GitHub?
 
 If you have been given write access to a GitHub repository, you can "clone" it to your local machine and start work. If you have not, you can still contribute by making a "fork" (there's a button for this in the top righthand corner of the GitHub page for each repository). This will make a copy of the repository in your GitHub account, that is linked to the "base repo" - you can then clone from your fork to get the projekt onto your local machine.
 
